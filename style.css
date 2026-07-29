@@ -8,16 +8,6 @@ body{
 
     background-color:#F8F6F1;
 
-    background-image:url("Saint-James.jpg");
-
-    background-repeat:no-repeat;
-
-    background-position:right center;
-
-    background-size:450px;
-
-    background-attachment:fixed;
-
 }
 
 
@@ -176,7 +166,18 @@ h2{
 
     overflow:hidden;
 
-    background:#000;
+    background-image:
+    linear-gradient(
+        rgba(255,255,255,0.55),
+        rgba(255,255,255,0.55)
+    ),
+    url("Saint-James.jpg");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:cover;
 
 }
 
@@ -223,12 +224,6 @@ h2{
     body{
 
         padding:15px;
-
-        background-size:320px;
-
-        background-position:center center;
-
-        background-attachment:scroll;
 
     }
 
@@ -287,6 +282,8 @@ h2{
     #reader{
 
         border-width:4px;
+
+        background-size:contain;
 
     }
 
