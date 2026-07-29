@@ -218,11 +218,59 @@ h2{
 
         padding:15px;
 
-        background-size:300px;
+        background-size:320px;
 
-        background-position:center bottom;
+        background-position:center center;
+
+        background-attachment:scroll;
 
     }
+
+
+    .container{
+
+        padding:20px;
+
+    }
+
+
+    .header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+
+    h2{
+
+        font-size:20px;
+
+    }
+
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+
+    #reader{
+
+        border-width:4px;
+
+    }
+
+}
 
 
     .container{
