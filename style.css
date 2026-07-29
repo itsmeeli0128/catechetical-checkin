@@ -84,6 +84,8 @@ body{
 
     align-items:center;
 
+    flex-direction:row;
+
     gap:35px;
 
     margin-bottom:25px;
@@ -101,6 +103,8 @@ body{
     width:95px;
 
     height:auto;
+
+    object-fit:contain;
 
     transition:transform .3s ease;
 
@@ -229,6 +233,7 @@ h2{
     }
 
 
+
     .container{
 
         padding:20px;
@@ -236,13 +241,23 @@ h2{
     }
 
 
+
     .header{
 
-        flex-direction:column;
+        flex-direction:row;
 
         gap:15px;
 
     }
+
+
+
+    .header img{
+
+        width:75px;
+
+    }
+
 
 
     h1{
@@ -252,6 +267,7 @@ h2{
     }
 
 
+
     h2{
 
         font-size:20px;
@@ -259,11 +275,13 @@ h2{
     }
 
 
+
     .subtitle{
 
         font-size:14px;
 
     }
+
 
 
     #reader{
