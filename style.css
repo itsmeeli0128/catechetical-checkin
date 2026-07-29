@@ -1,9 +1,30 @@
 body{
+
     margin:0;
+
     padding:30px;
+
     font-family:Arial, Helvetica, sans-serif;
-    background:linear-gradient(135deg,#F8F6F1,#EDE7D9);
+
+    background-color:#F8F6F1;
+
+    background-image:
+    linear-gradient(
+        rgba(248,246,241,0.90),
+        rgba(237,231,217,0.90)
+    ),
+    url("Saint-James.jpg");
+
+    background-repeat:no-repeat;
+
+    background-position:right center;
+
+    background-size:450px;
+
+    background-attachment:fixed;
+
 }
+
 
 
 .container{
@@ -24,6 +45,7 @@ body{
     animation:fadeIn .6s ease;
 
 }
+
 
 
 /* Smooth entrance animation */
@@ -195,6 +217,10 @@ h2{
     body{
 
         padding:15px;
+
+        background-size:300px;
+
+        background-position:center bottom;
 
     }
 
