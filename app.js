@@ -520,40 +520,6 @@ function escapeHtml(value) {
  * PAGE LOAD
  ************************************************************/
 
-window.onload = function() {
-  const container =
-    document.querySelector(".container");
-
-  const soundButton =
-    document.createElement("button");
-
-  soundButton.id =
-    "enableSoundButton";
-
-  soundButton.innerHTML =
-    "🔈 Enable Scanner Sound";
-
-  soundButton.onclick =
-    enableSound;
-
-  soundButton.style.cssText =
-    "margin-bottom:18px;" +
-    "padding:10px 18px;" +
-    "font-size:15px;" +
-    "font-weight:bold;" +
-    "background:#153e75;" +
-    "color:white;" +
-    "border:none;" +
-    "border-radius:9px;" +
-    "cursor:pointer;";
-
-  const reader =
-    document.getElementById("reader");
-
-  container.insertBefore(
-    soundButton,
-    reader
-  );
-
+window.onload = function () {
   startScanner();
 };
