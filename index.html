@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -23,77 +24,217 @@
         defer
     ></script>
 
-    <!-- v=2 forces GitHub Pages to load the updated app.js -->
+    <!-- Updated scanner logic -->
     <script
-        src="app.js?v=2"
+        src="app.js?v=3"
         defer
     ></script>
+
 </head>
+
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <div class="header">
+    <div class="header">
 
-            <img
-                src="Diocese-of-Catarman-235x300__1_-removebg-preview.png"
-                alt="Diocese of Catarman Logo"
-            >
-
-            <img
-                src="543358746_1271965641328994_8060104371518457444_n-removebg-preview.png"
-                alt="Commission on Evangelization and Catechesis Logo"
-            >
-
-        </div>
-
-        <h1>
-            5th Diocesan Catechists' Congress 2026
-        </h1>
-
-        <h2>
-            Diocese of Catarman
-        </h2>
-
-        <div class="subtitle">
-            Commission on Evangelization and Catechesis
-            <br>
-            Official QR Check-in System
-        </div>
-
-        <button
-            id="enableSoundButton"
-            type="button"
-            onclick="enableSound()"
-            style="
-                margin-bottom:18px;
-                padding:11px 20px;
-                font-size:15px;
-                font-weight:bold;
-                background:#153e75;
-                color:white;
-                border:none;
-                border-radius:9px;
-                cursor:pointer;
-            "
+        <img
+            src="Diocese-of-Catarman-235x300__1_-removebg-preview.png"
+            alt="Diocese of Catarman Logo"
         >
-            🔈 Enable Scanner Sound
-        </button>
 
-        <div id="reader"></div>
-
-        <div id="status">
-            📷 Ready to Scan...
-        </div>
-
-        <div class="footer">
-            © 2026 Diocese of Catarman
-            <br>
-            Commission on Evangelization and Catechesis
-        </div>
+        <img
+            src="543358746_1271965641328994_8060104371518457444_n-removebg-preview.png"
+            alt="Commission on Evangelization and Catechesis Logo"
+        >
 
     </div>
+
+
+    <h1>
+        5th Diocesan Catechists' Congress 2026
+    </h1>
+
+
+    <h2>
+        Diocese of Catarman
+    </h2>
+
+
+    <div class="subtitle">
+
+        Commission on Evangelization and Catechesis
+
+        <br>
+
+        Official QR Check-in System
+
+    </div>
+
+
+    <!-- CHECK-IN MODE -->
+
+    <div
+        style="
+            margin-bottom:18px;
+            text-align:left;
+        "
+    >
+
+        <label
+            for="checkInMode"
+            style="
+                display:block;
+                margin-bottom:7px;
+                font-size:14px;
+                font-weight:bold;
+                color:#153e75;
+            "
+        >
+            CHECK-IN MODE
+        </label>
+
+
+        <select
+            id="checkInMode"
+            onchange="handleModeChange()"
+            style="
+                width:100%;
+                padding:12px;
+                font-size:16px;
+                border:1px solid #ccc;
+                border-radius:9px;
+                background:white;
+                box-sizing:border-box;
+            "
+        >
+
+            <option value="Day 1">
+                Day 1 Check-In
+            </option>
+
+            <option value="Day 2">
+                Day 2 Check-In
+            </option>
+
+            <option value="Concurrent Session">
+                Concurrent Session Check-In
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- CONCURRENT SESSION SELECTOR -->
+
+    <div
+        id="sessionSelector"
+        style="
+            display:none;
+            margin-bottom:18px;
+            text-align:left;
+        "
+    >
+
+        <label
+            for="sessionSelect"
+            style="
+                display:block;
+                margin-bottom:7px;
+                font-size:14px;
+                font-weight:bold;
+                color:#153e75;
+            "
+        >
+            SELECT CONCURRENT SESSION
+        </label>
+
+
+        <select
+            id="sessionSelect"
+            style="
+                width:100%;
+                padding:12px;
+                font-size:16px;
+                border:1px solid #ccc;
+                border-radius:9px;
+                background:white;
+                box-sizing:border-box;
+            "
+        >
+
+            <option value="">
+                Select Session
+            </option>
+
+            <option value="Sacrament of Initiation">
+                Sacrament of Initiation
+            </option>
+
+            <option value="Sacrament of Service">
+                Sacrament of Service
+            </option>
+
+            <option value="Sacrament of Healing">
+                Sacrament of Healing
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- SOUND BUTTON -->
+
+    <button
+        id="enableSoundButton"
+        type="button"
+        onclick="enableSound()"
+        style="
+            margin-bottom:18px;
+            padding:11px 20px;
+            font-size:15px;
+            font-weight:bold;
+            background:#153e75;
+            color:white;
+            border:none;
+            border-radius:9px;
+            cursor:pointer;
+        "
+    >
+        🔈 Enable Scanner Sound
+    </button>
+
+
+    <!-- QR SCANNER -->
+
+    <div id="reader"></div>
+
+
+    <!-- STATUS -->
+
+    <div id="status">
+
+        📷 Ready to Scan...
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 Diocese of Catarman
+
+        <br>
+
+        Commission on Evangelization and Catechesis
+
+    </div>
+
+</div>
 
 </body>
 
